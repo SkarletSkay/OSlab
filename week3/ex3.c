@@ -37,15 +37,29 @@ void insert_node(linked_list *list, int data) {
 
 void delete_node(linked_list *list, int index) {
 	node *curr = list->head;
-	for(int i = 1; i < index && curr->next != NULL; i++ ){
-		curr = curr->next;
-	}
-	if(curr->next != NULL){
-		node* temp = curr->next->next;
-		free(curr->next);
-		curr->next = temp;
+	if(index < 0) {
+		printf("ERROR: Wrong index\n");
 	}else{
-		printf("ERROR: There is no element with index %d\n", index);
+		if(curr != NULL){
+			for(int i = 1; i < index && curr->next != NULL; i++ ){
+				curr = curr->next;
+			}
+			if( curr->next != NULL){
+				if(index != 0){
+					node* temp = curr->next->next;
+					free(curr->next);
+					curr->next = temp;
+				}else{
+					node* t =  list->head->next;
+					free(list->head);
+					list->head = t;
+				}
+			}else{
+				printf("ERROR: There is no element with index %d\n", index);
+			}
+		}else{
+			printf("ERROR: Empty list\n");
+		}
 	}
 }
 
@@ -61,10 +75,10 @@ int main(){
 	insert_node(list, 20);
 	insert_node(list, 55);
 	print_list(list);
-	delete_node(list, 1);
+	delete_node(list, 0);
 	print_list(list);
 	delete_node(list, 1);
 	print_list(list);
-	delete_node(list, 1);
+	delete_node(list, -1);
 	print_list(list);
 }
