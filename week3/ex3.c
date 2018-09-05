@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node_struct{
-
+typedef struct node_struct {
 	struct node_struct *next;
 	int data;
 } node;
 
-typedef struct linked_list_struct{
+typedef struct linked_list_struct {
 	node *head;
 } linked_list;
 
-void print_list(linked_list *list){
+void print_list(linked_list *list) {
 	node *curr = list->head;
 	while(curr != NULL){
 		printf("%d ",curr->data);
@@ -20,9 +19,9 @@ void print_list(linked_list *list){
 	printf("\n");
 }
 
-void insert_node(linked_list *list, int data){
+void insert_node(linked_list *list, int data) {
 	if(list->head == NULL){
-		list->head = malloc(sizeof(list->head));
+		list->head = malloc(sizeof(node));
 		list->head->data = data;
 		list->head->next = NULL;
 	}else{
@@ -30,13 +29,13 @@ void insert_node(linked_list *list, int data){
 		while(curr->next != NULL){
 			curr = curr->next;
 		}
-		curr->next = malloc(sizeof(curr));
+		curr->next = malloc(sizeof(node));
 		curr->next->data = data;
 		curr->next->next = NULL;
 	}
 }
 
-void delete_node(linked_list *list, int index){
+void delete_node(linked_list *list, int index) {
 	node *curr = list->head;
 	for(int i = 1; i < index && curr->next != NULL; i++ ){
 		curr = curr->next;
@@ -50,7 +49,7 @@ void delete_node(linked_list *list, int index){
 	}
 }
 
-linked_list* create_list(){
+linked_list* create_list() {
 	linked_list *list = (linked_list *)malloc(sizeof(linked_list));
 	list->head = NULL;
 	return list;
