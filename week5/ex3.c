@@ -87,7 +87,6 @@ int main()
 		printf("Error %d\n", stat2);
 	}
 	
-	int t = k;
 	while(1){
 		fflush(stdout);
 	}
