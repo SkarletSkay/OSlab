@@ -13,14 +13,14 @@ int main()
 	int fd[2];
 	if(pipe(fd)==0){
 		int pid  = fork();
-		if(pid==0){
+		if(pid>0){
+			close(fd[0]);
 			write(fd[1], str1, strlen(str1)+1);
-			close(fd[1]);
 			wait(NULL);
 			fflush(stdout);
 		}else{
+			close(fd[1]);
 			read(fd[0], str2, SIZE);
-			close(fd[0]);
 			printf("%s\n", str2);
 		}
 	}
