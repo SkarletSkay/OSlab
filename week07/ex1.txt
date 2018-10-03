@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   2780	    640	      8	   3428	    d64	prog_for_ex1
