@@ -1,0 +1,8 @@
+16-bit virtual addresses
+Pages are 8 KB
+
+8 KB = 8 * 1024 =  2^13 B
+13 bits  - offset
+16-13 = 3 bits 
+
+2^3 = 8 - entries
