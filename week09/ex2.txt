@@ -1,0 +1,10 @@
+In the files decrease.txt and increase.txt data set for 3 page frames.
+
+In the case of decreasing we should make sequence in such way that the element will be refered in the second time only after its replacement. 
+1 2 3
+4 replaces 1
+4 2 3
+And when we will refer to the 1, 1 will replace 2
+
+
+In the case of increasing we should avoid this situations. There should not be the elements which refer only once when they in the page table.
