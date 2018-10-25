@@ -1,0 +1,8 @@
+-rwxrwxr-x 1 user user 0 окт 25 22:30 _ex3.txt
+-rw-rw-r-- 1 user user 0 окт 25 22:30 _ex3.txt
+-rwxrw-rwx 1 user user 0 окт 25 22:30 _ex3.txt
+-rwxrwxrwx 1 user user 0 окт 25 22:30 _ex3.txt
+
+660 rw-rw----
+775 rwxrwxr-x
+777 rwxrwxrwx
