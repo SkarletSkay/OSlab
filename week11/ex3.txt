@@ -1,0 +1,1 @@
+Symbol '\n' flush the buffer where the printf write the input.
