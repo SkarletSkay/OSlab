@@ -1,0 +1,28 @@
+FileA is 117MiB
+
+BUF_SIZE=10000
+real	0m8.620s
+user	0m0.008s
+sys	0m0.541s
+
+BUF_SIZE=1000
+real	0m9.859s
+user	0m0.045s
+sys	0m1.040s
+
+BUF_SIZE=100
+real	0m12.693s
+user	0m0.312s
+sys	0m4.151s
+
+BUF_SIZE=10
+real	0m43.010s
+user	0m3.548s
+sys	0m36.963s
+
+BUF_SIZE=10000 SYNC 
+real	1m57.265s
+user	0m0.078s
+sys	0m2.809s
+
+Synchronization makes the user to wait when all data will be syncronized with the underlying hardware
