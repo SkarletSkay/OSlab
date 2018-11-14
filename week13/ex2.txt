@@ -1,0 +1,6 @@
+Deadlock recovery can sometimes let deadlocks happen. Some data may be lost if deadlock happens.
+
+Deadlock prevention algorithms may take much resources for themselves
+which can worsen throughput.
+
+Deadlock avoidance algorithms need special additional information (e.g. max resources needed).
